@@ -8,6 +8,10 @@ I created this project while learning how to integrate LVGL with ESP-IDF for my 
 
 This tutorial project follows the complete system narrative from hardware setup through LVGL integration to setting up a working menu, with explanatory comments along the way. 
 
+[Documented main.c](/main/main.c)
+
+![Demo Menu GUI](assets/demo-run.gif "Demo Menu GUI")
+
 ## Hardware
 - ESP-WROOM-32D dev board
 - Waveshare 2" LCD (240x320) with ST7789V controller

@@ -164,7 +164,7 @@
 #define LVGL_TASK_MAX_DELAY_MS  500
 #define LVGL_TASK_MIN_DELAY_MS  1000 / CONFIG_FREERTOS_HZ
 
-// This ist he amount of stack we're going to let LVGL use. 
+// This is the amount of stack we're going to let LVGL use. 
 // LVGL recommends >8kB. Here we're going with 10.
 #define LVGL_TASK_STACK_SIZE    (10 * 1024)
 
@@ -243,7 +243,7 @@ static void increase_lvgl_tick(void *arg)
 // Display points to our LCD panel, area defines where the image will go, and
 // px_map shows what the image is. This is the function that actually writes stuff
 // to our LCD display. LVGL, for all its complexity, is basically just there
-// to prepare buffers for us to push to the LCD ourselves. Makes you think.
+// to prepare buffers for us to push to the LCD ourselves.
 static void lvgl_flush_cb(lv_display_t *disp, const lv_area_t *area, uint8_t *px_map)
 {
     // Get the LCD handle and pixel offset
@@ -277,7 +277,7 @@ static void lvgl_flush_cb(lv_display_t *disp, const lv_area_t *area, uint8_t *px
 // when this gets called again. FreeRTOS has the frankly amazing feature
 // that usleep will release the task if the sleep duration is greater
 // than an a FreeRTOS tick, and will busy-wait if not... so we can
-// use it in comfort. Thanks! 
+// use it in comfort.
 static void lvgl_port_task(void *arg)
 {
     ESP_LOGI(TAG, "Starting LVGL task");
